@@ -1,7 +1,166 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root {
+  /* ## Colors */
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: #7b284f;
+  --light-raspberry: #823352;
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+  --color-primary: #2584ff;
+}
+@font-face {
+  font-family: "Young Serif";
+  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+@font-face {
+  font-family: "Outfit";
+  src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Outfit";
+  background-color: var(--eggshell);
+}
+.box {
+  width: 735px;
+  margin: 90px;
+  background-color: var(--white);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.container {
+  width: 655px;
+  background-color: var(--white);
+}
+
+img {
+  width: 655px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+
+h1 {
+  color: var(--dark-charcoal);
+  font-size: 3.5rem;
+}
+
+h1,
+h2 {
+  font-family: "Young Serif";
+  font-weight: 400;
+}
+h2 {
+  color: var(--nutmeg);
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+  color: var(--light-raspberry);
+  margin-left: 25px;
+}
+
+ol {
+  padding-left: 20px;
+}
+ol li::marker {
+  color: var(--nutmeg);
+  font-weight: 600;
+}
+ul li::marker {
+  color: var(--nutmeg);
+}
+
+ul {
+  list-style-type: square;
+}
+
+p,
+li,
+td {
+  font-size: 1.6rem;
+  color: var(--wenge-brown);
+}
+li {
+  padding-left: 10px;
+  letter-spacing: 0.3px;
+  line-height: 25px;
+}
+
+#card {
+  background-color: var(--rose-white);
+  padding: 12px;
+  border-radius: 10px;
+}
+hr {
+  margin: 20px 0;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+td {
+  width: 65px;
+  padding: 15px 30px;
+  font-weight: 400;4
+}
+tbody {
+  display: flex;
+  flex-direction: column;
+}
+.line {
+  border-bottom: 1px solid #ddd;
+}
+tr {
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+tr :nth-child(2) {
+  color: var(--nutmeg);
+  font-weight: 700;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (width<426px) {
+  body {
+    background-color: var(--white);
+  }
+  .container {
+    width: 83dvw;
+  }
+
+  .box {
+    width: 100dvw;
+  }
+
+  img {
+    margin: 0;
+    width: 100dvw;
+  }
 }
